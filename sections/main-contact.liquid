@@ -1,0 +1,182 @@
+{% render 'section-settings' %}
+    <div class='content-inner fixed-container '>
+       <section class="content-block full">
+            <div class="text">
+                {%- for block in section.blocks -%}
+                    {%- case block.type -%}
+                        {%- when 'content' -%}
+                        <p style="text-align: center"><strong>{{ block.settings.title }}</strong></p>
+                        <p style="text-align: center">
+                            {%- if block.settings.sub_title != blank -%}
+                                {{ block.settings.sub_title }}
+                                <br>
+                            {%- endif -%}
+                            {%- if block.settings.fet_link != blank -%}
+                                (<a href="{{ block.settings.fet_link }}" target="_blank" rel="noreferrer noopener">{{ block.settings.fet_text}}</a>)
+                                <br>
+                            {%- endif -%}
+                            {%- if block.settings.label_1 != blank -%}         
+                                <strong>
+                                    <br>{{ block.settings.label_1 }}
+                                </strong> 
+                                <a href="{{ block.settings.url_1 }}">   {{ block.settings.text_1}}
+                                </a>
+                                <br>
+                            {%- endif -%}
+                            {%- if block.settings.label_2 != blank -%}         
+                                <strong>
+                                    <br>{{ block.settings.label_2 }}
+                                </strong> 
+                                <a href="{{ block.settings.url_2 }}">   {{ block.settings.text_2}}
+                                </a>
+                                <br>
+                            {%- endif -%}
+                        {%- when 'html' -%}
+                            {{ block.settings.html }}
+                       
+                    {%- endcase -%}
+                {%- endfor -%}
+            </div>    
+        </section>
+        {%- if section.settings.social -%}
+            <ul class="socials-nav page-socials">
+                <li>
+                    <a href="https://www.instagram.com/henri_living/" target="_blank">
+                        <div class="icon">
+                            {% render 'instagram' %}
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.facebook.com/HenriLiving/" target="_blank">
+                        <div class="icon">
+                            {% render 'icon-facebook'%}
+                        </div>
+                    </a>
+                </li>
+            </ul>    
+        {%- endif -%}
+        {%- if section.settings.googlemap != blank -%}
+            {{ section.settings.googlemap }}
+        {%- endif -%}
+    </div>
+{% schema %}
+
+    {
+        "name": "Main contact",
+        "settings":[
+            {
+                "type":"color",
+                "id":"bg_color",
+                "label":"Background Color"
+            },{
+                "type": "header",
+                "content": "padding settings"
+            },{
+                "type": "range",
+                "id": "ptop",
+                "min": 0,
+                "max": 36,
+                "step": 4,
+                "unit": "px",
+                "label": "Padding top",
+                "default": 20
+            },{
+                "type": "range",
+                "id": "pbottom",
+                "min": 0,
+                "max": 36,
+                "step": 4,
+                "unit": "px",
+                "label": "Padding bottom",
+                "default": 20
+            },{
+                "type":"text",
+                "id":"heading",
+                "label":"Heading"
+            },{
+                "type": "checkbox",
+                "id": "social",
+                "label": "Show social nav",
+                "default": true
+            },{
+                "type":"html",
+                "id":"googlemap",
+                "label":"Google map"
+            }
+        ],
+        "blocks":[
+            {
+                "name":"Conent",
+                "type":"content",
+                "settings":[
+                    {
+                        "type" : "text",
+                        "id":"title",
+                        "label":"Title"
+                    }, {
+                        "type" : "text",
+                        "id":"sub_title",
+                        "label":"Sub title"
+                    }, {
+                        "type" : "url",
+                        "id":"fet_link",
+                        "label":"Featured link"
+                    }, {
+                        "type" : "text",
+                        "id":"fet_text",
+                        "label":"Featured text"
+                    },{
+                        "type" : "header",
+                        "content":"Label link 1"
+                    },{
+                        "type" : "text",
+                        "id":"label_1",
+                        "label":"Label"
+                    },                  {
+                        "type" : "url",
+                        "id":"url_1",
+                        "label":"Label url "
+                    }, {
+                        "type" : "text",
+                        "id":"text_1",
+                        "label":"Label text"
+                    },{
+                        "type" : "header",
+                        "content":"Label link 2"
+                    },{
+                        "type" : "text",
+                        "id":"label_2",
+                        "label":"Label"
+                    },                  {
+                        "type" : "url",
+                        "id":"url_2",
+                        "label":"Label url "
+                    }, {
+                        "type" : "text",
+                        "id":"text_2",
+                        "label":"Label text"
+                    }
+                ]
+            },{
+                "name":"Html",
+                "type":"html",
+                "settings":[
+                    {
+                        "type":"html",
+                        "id":"html",
+                        "label":"Content"
+                    }
+                ]
+            },{
+                "name":"Social nav",
+                "type":"social_nav"
+            }
+        ],  
+        "presets":[
+            {
+                "name":"Main contact"
+            }
+        ]        
+    }
+{% endschema %}

@@ -1,0 +1,10 @@
+{
+  "sections": {
+    "gallery": {
+      "type": "gallery"
+    }
+  },
+  "order": [
+    "gallery"
+  ]
+}

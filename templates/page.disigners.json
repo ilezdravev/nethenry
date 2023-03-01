@@ -1,0 +1,49 @@
+{
+  "sections": {
+    "main": {
+      "type": "disigners",
+      "blocks": {
+        "grid-1": {
+          "type": "gird_item",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/HEN-Surry_Hills-thumb.jpg",
+            "url": "shopify:\/\/pages\/disigner",
+            "title": "Andrea Lucatello",
+            "sub_title": "Milan, IT"
+          }
+        },
+        "grid-2": {
+          "type": "gird_item",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/HEN-Surry_Hills-thumb.jpg",
+            "url": "shopify:\/\/pages\/disigner",
+            "title": "Andrea Lucatello",
+            "sub_title": "Milan, IT"
+          }
+        },
+        "grid-3": {
+          "type": "gird_item",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/HEN-Surry_Hills-thumb.jpg",
+            "url": "shopify:\/\/pages\/disigner",
+            "title": "Andrea Lucatello",
+            "sub_title": "Milan, IT"
+          }
+        }
+      },
+      "block_order": [
+        "grid-1",
+        "grid-2",
+        "grid-3"
+      ],
+      "settings": {
+        "bg_color": "",
+        "ptop": 20,
+        "pbottom": 20
+      }
+    }
+  },
+  "order": [
+    "main"
+  ]
+}

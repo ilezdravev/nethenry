@@ -1,0 +1,156 @@
+{% render 'section-settings' %}
+
+<section class="bg-light">
+    <div class="container">
+        <h2 class="mb-40">{{ section.settings.heading }}</h2>
+        <div class="carousel">
+            <div class="designer-carousel_{{ section.id }}">
+                {% for block in section.blocks %}
+                   <div class="slide">
+                        <a href="{{ block.settings.url }}" class="designer-card" tabindex="0">
+                            <div class="designer-card--image">
+                                <img src="{{ block.settings.image | img_url:"1000x" }}" width height alt="{{ block.settings.image.alt }}" loading="lazy" data-xblocker="passed">
+                            </div>
+                            <div class="designer-card--content">
+                                <h3>{{ block.settings.title }}</h3>
+                                <span class="subtitle">{{ block.settings.desc }}</span>
+                            </div>
+                        </a>
+                    </div>
+                {% endfor %}
+            </div>
+            <nav class="slider__nav">
+                <button title="Go to the previous slide" data-prev="" class="prev-btn dc-prev">
+                    {% render 'carousel__arrow-icon-left' %}
+                </button>
+                <button title="Go to the next slide" data-next="" class="next-btn dc-next">
+                   {% render 'carousel__arrow-icon-right' %}
+                </button>
+            </nav>
+        </div>
+        <div class="flex mt-40px">
+            <a href="{{ section.settings.url }}" class="btn m-auto">{{ section.settings.text }}</a>
+        </div>
+    </div>
+</section>
+
+
+{% schema %}
+
+    {
+        "name": "Carousel album",
+        "settings":[
+            {
+                "type":"color",
+                "id":"bg_color",
+                "label":"Background Color"
+            },{
+                "type": "header",
+                "content": "padding settings"
+            },{
+                "type": "range",
+                "id": "ptop",
+                "min": 0,
+                "max": 36,
+                "step": 4,
+                "unit": "px",
+                "label": "Padding top",
+                "default": 20
+            },{
+                "type": "range",
+                "id": "pbottom",
+                "min": 0,
+                "max": 36,
+                "step": 4,
+                "unit": "px",
+                "label": "Padding bottom",
+                "default": 20
+            },{
+                "type":"text",
+                "id":"heading",
+                "label":"Heading"
+            },{
+                "type":"text",
+                "id":"text",
+                "label":"Button text"
+            },{
+                "type":"url",
+                "id":"url",
+                "label":"Button URL"
+            }
+
+        ],
+        "blocks":[
+            {
+                "name":"Slide Item",
+                "type":"slide_item",
+                "settings":[
+                    {
+                        "type" : "image_picker",
+                        "id":"image",
+                        "label":"Image"
+                    },{
+                        "type" : "text",
+                        "id":"title",
+                        "label":"Title"
+                    },{
+                        "type" : "text",
+                        "id":"desc",
+                        "label":"Description"
+                    }, {
+                        "type" : "url",
+                        "id":"url",
+                        "label":"URL"
+                    }
+                ]
+            }
+        ],  
+        "presets":[
+            {
+                "name":"Carousel Album"
+            }
+        ]        
+    }
+{% endschema %}
+
+<script>
+    $('.designer-carousel_{{ section.id }}').slick({
+        centerPadding: '0',
+        slidesToShow: 1,
+        mobileFirst: true,
+        speed: 300,
+        arrows: false,
+        responsive: [ 
+            {
+                breakpoint: 576,
+                settings: {
+                    slidesToShow: 2,
+                }
+            },
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 3,
+                }
+            },
+            {
+                breakpoint: 1100,
+                settings: {
+                    slidesToShow: 4,
+                }
+            },
+
+        ],  
+
+    });
+
+    $('.dc-prev').click(function(e){ 
+        //e.preventDefault(); 
+      $('.designer-carousel_{{ section.id }}').slick('slickPrev');
+  } );
+  
+  $('.dc-next').click(function(e){
+      //e.preventDefault(); 
+      $('.designer-carousel_{{ section.id }}').slick('slickNext');
+  } );  
+</script>

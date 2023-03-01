@@ -1,0 +1,142 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-about-section",
+      "blocks": {
+        "10d18d65-0ec9-40ae-8583-da4cdd224d6b": {
+          "type": "quote_text",
+          "settings": {
+            "text": "Look at usual things with unusual eyes"
+          }
+        },
+        "a33fab48-deef-4862-8188-dddf725bf46d": {
+          "type": "figure_text",
+          "settings": {
+            "text": "- VICO MAGISTRETTI"
+          }
+        },
+        "579fcb46-c990-4741-b144-e1a63c1d6df8": {
+          "type": "desc",
+          "settings": {
+            "text": "Henri Living is a design-led, contemporary furniture store that draws on the very best of reputable and emerging brands to bring you a constantly changing line-up of carefully curated indoor and outdoor furniture."
+          }
+        },
+        "e756bada-f111-4d0b-af75-769679eec4b8": {
+          "type": "media_block",
+          "settings": {
+            "img": "shopify:\/\/shop_images\/2017.11.09CAMERICHHOMESTYLEDSHOOT-81.jpg",
+            "text": "We believe design should be fun, accessible and delivered without pretentiousness."
+          }
+        },
+        "7b83ba92-8fcb-4fae-b258-aece58f0ed71": {
+          "type": "desc",
+          "settings": {
+            "text": "We are space creators helping you think of your space in ways you may not have. Beautiful design and a deep-rooted enthusiasm for creating harmonious spaces, lies at the heart of everything we do."
+          }
+        }
+      },
+      "block_order": [
+        "10d18d65-0ec9-40ae-8583-da4cdd224d6b",
+        "a33fab48-deef-4862-8188-dddf725bf46d",
+        "579fcb46-c990-4741-b144-e1a63c1d6df8",
+        "e756bada-f111-4d0b-af75-769679eec4b8",
+        "7b83ba92-8fcb-4fae-b258-aece58f0ed71"
+      ],
+      "settings": {
+        "bg_color": "#ffffff",
+        "ptop": 0,
+        "pbottom": 0,
+        "heading": "About."
+      }
+    },
+    "986038ba-7bdc-46b3-b064-9529f44b0c42": {
+      "type": "teammber-grids",
+      "blocks": {
+        "27520c6f-e103-409f-b2c3-06bfdd38b5ee": {
+          "type": "gird_item",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Bruce-Moorman-for-website-p-800.jpg",
+            "title": "Bruce Moorman",
+            "desc": "CEO"
+          }
+        },
+        "b8061afb-c205-425a-8870-48a5446bd173": {
+          "type": "gird_item",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/lyle.jpg",
+            "title": "Lyle Henri",
+            "desc": "Business Development \/ Commerical Sales"
+          }
+        },
+        "d194533e-ccf0-4468-a8a9-54a9083b26fc": {
+          "type": "gird_item",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/lua.jpg",
+            "title": "Lua Henri",
+            "desc": "Interior Design \/ Retail Sales"
+          }
+        },
+        "52e5b622-9d4e-42c6-b340-19229412a47c": {
+          "type": "gird_item",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/gillian-moorman.jpg",
+            "title": "Gillian Moorman",
+            "desc": "Retail Sales \/ Interior Design"
+          }
+        },
+        "cd4eeb6c-076f-41e9-b58b-bb5790a6089b": {
+          "type": "gird_item",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/meszaros-fokep.jpg",
+            "title": "Stephen Meszaros",
+            "desc": "Showroom Manager"
+          }
+        },
+        "fa8c93c5-1cc1-4d2c-a52a-dacb055b44f1": {
+          "type": "gird_item",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/jason-oaks.jpg",
+            "title": "Jason Oakes",
+            "desc": "Warehouse Manager"
+          }
+        },
+        "49535ee7-db21-4b5a-aa6b-cb17194bcc07": {
+          "type": "gird_item",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/alice.jpg",
+            "title": "Alice Del Dosso",
+            "desc": "Operations - Logistics Manager"
+          }
+        },
+        "ba709fc5-eb4b-4bae-a737-87767d56696a": {
+          "type": "gird_item",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/jared-moftah.jpg",
+            "title": "Jared Moftah",
+            "desc": "Opertaions - Data Manager"
+          }
+        }
+      },
+      "block_order": [
+        "27520c6f-e103-409f-b2c3-06bfdd38b5ee",
+        "b8061afb-c205-425a-8870-48a5446bd173",
+        "d194533e-ccf0-4468-a8a9-54a9083b26fc",
+        "52e5b622-9d4e-42c6-b340-19229412a47c",
+        "cd4eeb6c-076f-41e9-b58b-bb5790a6089b",
+        "fa8c93c5-1cc1-4d2c-a52a-dacb055b44f1",
+        "49535ee7-db21-4b5a-aa6b-cb17194bcc07",
+        "ba709fc5-eb4b-4bae-a737-87767d56696a"
+      ],
+      "settings": {
+        "bg_color": "",
+        "ptop": 0,
+        "pbottom": 0,
+        "heading": "Team."
+      }
+    }
+  },
+  "order": [
+    "main",
+    "986038ba-7bdc-46b3-b064-9529f44b0c42"
+  ]
+}

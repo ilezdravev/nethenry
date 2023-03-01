@@ -396,9 +396,12 @@
 }
 
 .banner__heading {
-  margin-bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: corporate-a,serif;
+  font-size: 89px;
 }
-
 .banner__box .banner__heading + * {
   margin-top: 1rem;
 }

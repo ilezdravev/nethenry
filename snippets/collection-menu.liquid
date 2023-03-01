@@ -1,0 +1,28 @@
+{%- if menu != blank -%}
+    <nav class="category-sub-menu nav-child">
+        <ul class="cat-sub-list">
+            {%- for item in menu.links -%}
+                {%- if item.links != blank -%}
+                    <li class="category-item">
+                        <input type="checkbox" class="hidden" id="">
+                        <label class="accord-label mob" for="">
+                            <span class="">{{ item.title }}</span>
+                        </label>
+                        <a href="{{ item.url }}" class="lg">
+                            <span class="">{{ item.title }}</span>
+                        </a>
+                        <ul class="drop-nav">
+                            {%- for child_link in item.links -%}
+                                <li><a href="{{ child_link.url }}">{{ child_link.title }}</a></li>
+                            {%- endfor -%}
+                        </ul>
+                    </li>
+                {%- else -%}
+                    <li class="category-item">
+                        <a href="{{ item.url }}" class="">{{ item.title }}</a>
+                    </li>
+                {%- endif -%}    
+            {%- endfor -%}
+        </ul>
+    </nav>  
+{%- endif -%}

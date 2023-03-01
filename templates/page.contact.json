@@ -1,7 +1,62 @@
 {
   "sections": {
+    "d6b5e75c-5e95-463f-8c59-933dcb05183d": {
+      "type": "hero",
+      "settings": {
+        "bg_color": "",
+        "ptop": 20,
+        "pbottom": 20,
+        "heading": "Get In Touch",
+        "image": "shopify:\/\/shop_images\/Henri-Living-Claremont-EDITED.jpg"
+      }
+    },
+    "6479bca0-6dae-4eef-ad81-44e243a227f1": {
+      "type": "main-contact",
+      "blocks": {
+        "66ba05ec-41ae-444c-90a3-911acb6736d9": {
+          "type": "content",
+          "settings": {
+            "title": "CLAREMONT SHOWROOM",
+            "sub_title": "245 Stirling Hwy, Claremont WA 6010",
+            "fet_link": "https:\/\/g.page\/Henri_Living?share",
+            "fet_text": "View on Google Maps",
+            "label_1": "P",
+            "url_1": "https:\/\/henri-staging.spicybuild.net\/tel:0893896669",
+            "text_1": "(08) 9389 6669",
+            "label_2": "E",
+            "url_2": "mailto:info@henriliving.com.au",
+            "text_2": "info@henriliving.com.au"
+          }
+        },
+        "4cd54f6f-3084-477e-a204-23bf492f52d2": {
+          "type": "html",
+          "settings": {
+            "html": "<p style=\"text-align: center\"><strong>—<br>OPENING TIMES<br><\/strong><strong>Monday — Saturday<\/strong> 9.30 am - 5 pm<br><strong>Sunday<\/strong> By appointment<br><strong>Public Holidays <\/strong>Closed<br><\/p>"
+          }
+        },
+        "256d37df-8a5e-4381-af3f-e64d3d4c3442": {
+          "type": "social_nav",
+          "settings": {
+          }
+        }
+      },
+      "block_order": [
+        "66ba05ec-41ae-444c-90a3-911acb6736d9",
+        "4cd54f6f-3084-477e-a204-23bf492f52d2",
+        "256d37df-8a5e-4381-af3f-e64d3d4c3442"
+      ],
+      "settings": {
+        "bg_color": "",
+        "ptop": 20,
+        "pbottom": 20,
+        "heading": "",
+        "social": true,
+        "googlemap": "<iframe src=\"https:\/\/www.google.com\/maps\/embed?pb=!1m18!1m12!1m3!1d13536.91771906605!2d115.77789990429777!3d-31.981795430936963!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2a32a448a9744acf%3A0x772fdd29551c30b4!2s245%20Stirling%20Hwy%2C%20Claremont%20WA%206010!5e0!3m2!1sen!2sau!4v1668472678961!5m2!1sen!2sau\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"\"><\/iframe>"
+      }
+    },
     "main": {
       "type": "main-page",
+      "disabled": true,
       "settings": {
         "padding_top": 36,
         "padding_bottom": 36
@@ -9,6 +64,7 @@
     },
     "form": {
       "type": "contact-form",
+      "disabled": true,
       "settings": {
         "heading": "",
         "heading_size": "h1",
@@ -19,6 +75,8 @@
     }
   },
   "order": [
+    "d6b5e75c-5e95-463f-8c59-933dcb05183d",
+    "6479bca0-6dae-4eef-ad81-44e243a227f1",
     "main",
     "form"
   ]

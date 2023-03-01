@@ -1,0 +1,25 @@
+<article>
+  <div class="inner relative">
+    <a href="{{ product_url }}">
+      {%- if text != blank -%}
+        <div class="product-card-banner">
+          <sup class="product-sup text-accent">{{ text }}</sup>
+        </div>
+      {%- endif -%}
+      <figure>
+        <img src="{{ image }}" alt="{{ product_title }}" loading="lazy" width height>
+      </figure>
+    </a>
+    <div>
+      <a class="link" href="{{ product_url }}" title="{{ product_title }}">
+        {{ product_title }}
+        {% comment %} <span>Pendant Light</span> {% endcomment %}
+      </a>
+      <p>
+        <a class="link" href="{{ collection_url }}">
+          {{ collection_title }}
+        </a>
+      </p>
+    </div>
+  </div>
+</article>

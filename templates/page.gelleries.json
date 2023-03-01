@@ -1,0 +1,77 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    },
+    "e73967a8-6473-44dd-8654-f91ad563caef": {
+      "type": "galleries",
+      "blocks": {
+        "f18ec31a-85ad-4a3d-9c9f-011145688c4a": {
+          "type": "gird_item",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/HEN-Wexford_Road-Thumb-1.png",
+            "url": "shopify:\/\/pages\/sample-gallery-1",
+            "title": "Your title",
+            "sub_title": "sub title",
+            "desc": "Description",
+            "text": "Read More"
+          }
+        },
+        "acfd907c-31dd-4c66-be26-c824f0f8d27c": {
+          "type": "gird_item",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/HEN-Wexford_Road-Thumb-1.png",
+            "url": "shopify:\/\/pages\/sample-gallery-1",
+            "title": "Your title",
+            "sub_title": "Sub title",
+            "desc": "Description",
+            "text": "Read More"
+          }
+        },
+        "340a9f8b-fa7f-4dce-9779-32af3492448b": {
+          "type": "gird_item",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/HEN-Wren__Whippet-Thumb.jpg",
+            "url": "shopify:\/\/pages\/sample-gallery-1",
+            "title": "Your title",
+            "sub_title": "Sub title",
+            "desc": "Description",
+            "text": "Read More"
+          }
+        },
+        "78c0d8aa-e9f5-4e2f-a597-fa56566fa503": {
+          "type": "gird_item",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/HEN-Coastal_Paradise-THUMB.jpg",
+            "url": "",
+            "title": "Your title",
+            "sub_title": "Sub title",
+            "desc": "Description",
+            "text": "Read More"
+          }
+        }
+      },
+      "block_order": [
+        "f18ec31a-85ad-4a3d-9c9f-011145688c4a",
+        "acfd907c-31dd-4c66-be26-c824f0f8d27c",
+        "340a9f8b-fa7f-4dce-9779-32af3492448b",
+        "78c0d8aa-e9f5-4e2f-a597-fa56566fa503"
+      ],
+      "settings": {
+        "bg_color": "",
+        "ptop": 20,
+        "pbottom": 20,
+        "heading": "Galleries."
+      }
+    }
+  },
+  "order": [
+    "main",
+    "e73967a8-6473-44dd-8654-f91ad563caef"
+  ]
+}

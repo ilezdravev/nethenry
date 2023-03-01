@@ -1,0 +1,112 @@
+<div class="site-wrapper">
+    <main class="page-content article-content fade-in standard-layout container">
+        <div class="article-container">
+            <nav class="toolbar product-item-nav">
+                &lt; Back to <a href="https://henri-staging.spicybuild.net/news-galleries">News + Galleries</a>
+            </nav>
+            {% render 'gallery-banner', img : 'https://henri-staging.spicybuild.net/media/articles/BIG-V-HOUSE/_banner/HEN-Big_V_House-Banner-2.jpg', title: 'BIG V HOUSE, Kelmscott', sub_title : 'by Tatulli Design Studio'%}
+        </div>
+        {% render 'image-gallery-slider'%}
+        <div class="content-inner">
+            <section class="content-block two-columns">
+                <div class="half">
+                    <p>
+                        Situated on the Kelmscott ridgeline that overlooks the Brookton Highway valley, the site of this family home is precariously steep and surrounded by natural bush.
+                        This modern interpretation of the traditional bush pole architectural style creates a striking home that emphasises it's natural surroundings by hanging off the side of the cliff.<br>
+                        From all areas of the house the view lines are framed, creating a continued connection with the natural landscape. A large alfresco and northern sun deck hang out from the main house over the cliff edge and expose the outdoor area to the sheer severity of the block slope and picturesque surrounding landscape.
+                        <p><strong>GET THE LOOK<br></strong><br>Furniture featured includes our <a href="https://www.henriliving.com.au/harbour-outdoor/dining-chairs/hamilton">Hamilton dining</a> &amp; <a href="https://www.henriliving.com.au/harbour-outdoor/lounge-chairs/hamilton">lounge chairs</a>, <a href="https://www.henriliving.com.au/harbour-outdoor/dining-tables/hayman">Hayman dining table</a>, <a href="https://www.henriliving.com.au/harbour-outdoor/coffee-side-tables/macquarie-coffee-table">Macquarie coffee table</a>, <a href="https://www.henriliving.com.au/desiree/sofas/lovely-day">Lovely Day sofa</a>, <a href="https://www.henriliving.com.au/desiree/lounge-chairs/koster">Koster lounge chair</a>, <a href="https://www.henriliving.com.au/desiree/coffee-side-tables/dablui-in">Dabliu-in coffee table</a>, <a href="https://www.henriliving.com.au/desiree/coffee-side-tables/yori">Yori side table</a> and our <a href="https://www.henriliving.com.au/jesse/storage/woody-quadra">Woody Quadra sideboard</a> and numerous accessories all available in our <a href="https://www.henriliving.com.au/showroom">Claremont Showroom.</a>
+                    </p>            
+                </div>
+                <div class="half">
+                    <table>
+                        <tbody><tr>
+                            <th>LOCATION</th>
+                            <td><p>Kelmscott, Western Australia</p></td>
+                        </tr>
+                                            <tr>
+                            <th>ARCHITECT</th>
+                            <td><p><a href="https://www.darklightdesign.com.au/" target="_blank" rel="noreferrer noopener">Darklight Design</a></p></td>
+                        </tr>
+                                            <tr>
+                            <th>INTERIOR DESIGNER</th>
+                            <td><p><a href="https://www.tatulli.com.au/" target="_blank" rel="noreferrer noopener">Tatulli Design Studio</a></p></td>
+                        </tr>
+                                            <tr>
+                            <th>BUILDER</th>
+                            <td><p><a href="https://www.ironstonehomes.com.au/" target="_blank" rel="noreferrer noopener">Ironstone Homes</a></p></td>
+                        </tr>
+                                            <tr>
+                            <th>PHOTOGRAPHER</th>
+                            <td><p><a href="http://adriantanphotography.com/" target="_blank" rel="noreferrer noopener">Adrian Tan Photography</a></p></td>
+                        </tr>
+                                            <tr>
+                            <th>FEATURES</th>
+                            <td><ul><li>Home Beautiful Magazine October 2019</li></ul></td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+            {% for block in section.blocks %}
+                {% if block.type == 'gird_item' and block != blank%}
+                    <header class="centered">
+                        <h3>BROWSE MORE GALLERIES</h3>
+                    </header>
+                    {% break %}
+                {% endif %}
+            {% endfor %}
+            
+            <section class="content-block articles grid lg-grid-4 card-gap">
+                {% for block in section.blocks %}
+                    {% if block.type == 'gird_item' %}
+                        {% render 'article-card', url : block.settings.url,img : block.settings.image, title: block.settings.title, sub_title : block.settings.sub_title , desc : block.settings.desc , text : block.settings.text%}
+                    {% endif %}
+                {% endfor %}
+            </section>
+        </div>
+    </main>
+</div>
+
+
+{% schema %}
+    {
+        "name":"Gallery",
+        "blocks":[
+            {
+                "name":"Gallery Grid",
+                "type":"gird_item",
+                "settings":[
+                    {
+                        "type" : "image_picker",
+                        "id":"image",
+                        "label":"Image"
+                    },{
+                        "type" : "url",
+                        "id":"url",
+                        "label":"Url"
+                    },{
+                        "type" : "text",
+                        "id":"title",
+                        "default":"Your title",
+                        "label":"Title"
+                    },{
+                        "type" : "text",
+                        "id":"sub_title",
+                        "default":"Sub title",
+                        "label":"Sub title"
+                    },{
+                        "type" : "text",
+                        "id":"desc",
+                        "default":"Description",
+                        "label":"Description"
+                    },{
+                        "type" : "text",
+                        "id":"text",
+                        "default":"Read More",
+                        "label":"Link Text"
+                    }
+                ]
+            }
+        ]
+    }
+{% endschema %}

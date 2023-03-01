@@ -1,0 +1,28 @@
+<article>
+  <div class="inner relative">
+    <a href="{{ product.url }}" title="{{ product.title }}">
+      <figure>
+        <img
+          src="{{ product.featured_image | img_url : "500x" }}"
+          width
+          height
+          loading="lazy"
+          data-xblocker="passed"
+          style="visibility: visible;"
+        >
+      </figure>
+    </a>
+    <div>
+      <a href="{{ product.url }}" title="{{ product.title }}">
+        {{ product.title }}
+      </a>
+      <p>
+        {% for collection in product.collections %}
+          {%- if forloop.index == 1 -%}
+            <a class="{{ collection.url }}" href="{{ collection.title }}">{{ collection.title }}</a>
+          {%- endif -%}
+        {% endfor %}
+      </p>
+    </div>
+  </div>
+</article>

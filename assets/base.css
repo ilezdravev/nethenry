@@ -400,7 +400,7 @@ body,
   font-weight: var(--font-body-weight);
 }
 
-h1,
+/* h1,
 h2,
 h3,
 h4,
@@ -418,9 +418,9 @@ h5,
   color: rgb(var(--color-foreground));
   line-height: calc(1 + 0.3 / max(1, var(--font-heading-scale)));
   word-break: break-word;
-}
+} */
 
-.hxl {
+/* .hxl {
   font-size: calc(var(--font-heading-scale) * 5rem);
 }
 
@@ -500,12 +500,12 @@ h6,
   color: rgba(var(--color-foreground), 0.75);
   margin-block-start: 1.67em;
   margin-block-end: 1.67em;
-}
+} */
 
 blockquote {
   font-style: italic;
   color: rgba(var(--color-foreground), 0.75);
-  border-left: 0.2rem solid rgba(var(--color-foreground), 0.2);
+  /* border-left: 0.2rem solid rgba(var(--color-foreground), 0.2); */
   padding-left: 1rem;
 }
 
@@ -559,20 +559,20 @@ blockquote {
   color: rgb(var(--color-foreground));
 }
 
-table:not([class]) {
+/* table:not([class]) {
   table-layout: fixed;
   border-collapse: collapse;
   font-size: 1.4rem;
   border-style: hidden;
-  box-shadow: 0 0 0 0.1rem rgba(var(--color-foreground), 0.2);
+  box-shadow: 0 0 0 0.1rem rgba(var(--color-foreground), 0.2); */
   /* draws the table border  */
-}
+/* }
 
 table:not([class]) td,
 table:not([class]) th {
   padding: 1em;
   border: 0.1rem solid rgba(var(--color-foreground), 0.2);
-}
+} */
 
 @media screen and (max-width: 749px) {
   .small-hide {
@@ -612,7 +612,7 @@ table:not([class]) th {
   opacity: 0.7;
 }
 
-a:empty,
+/* a:empty,
 ul:empty,
 dl:empty,
 div:empty,
@@ -626,7 +626,7 @@ h4:empty,
 h5:empty,
 h6:empty {
   display: none;
-}
+} */
 
 .link,
 .customer a {
@@ -747,10 +747,10 @@ details > * {
   width: 1.5rem;
 }
 
-h3 .icon-arrow,
+/* h3 .icon-arrow,
 .h3 .icon-arrow {
   width: calc(var(--font-heading-scale) * 1.5rem);
-}
+} */
 
 /* arrow animation */
 .animate-arrow .icon-arrow path {
@@ -991,7 +991,7 @@ summary::-webkit-details-marker {
 .title-wrapper--no-top-margin > .title {
   margin-top: 0;
 }
-
+/* 
 .subtitle {
   font-size: 1.8rem;
   line-height: calc(1 + 0.8 / var(--font-body-scale));
@@ -1007,7 +1007,7 @@ summary::-webkit-details-marker {
 .subtitle--medium {
   font-size: 1.6rem;
   letter-spacing: 0.08rem;
-}
+} */
 
 /* component-grid */
 .grid {
@@ -2243,7 +2243,17 @@ input[type='checkbox'] {
   background-color: rgb(var(--color-background));
   z-index: 1;
 }
-
+.list-menu__item {
+  display: flex;
+  align-items: center;
+  line-height: calc(1 + 0.3 / var(--font-body-scale));
+}
+.list-menu__item--link {
+  text-decoration: none;
+  padding-bottom: 1rem;
+  padding-top: 1rem;
+  line-height: calc(1 + 0.8 / var(--font-body-scale));
+}
 .header-wrapper--border-bottom {
   border-bottom: 0.1rem solid rgba(var(--color-foreground), 0.08);
 }

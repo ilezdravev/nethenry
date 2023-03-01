@@ -1,222 +1,284 @@
 {
   "sections": {
-    "image_banner": {
-      "type": "image-banner",
+    "5c8c2e4c-2240-427e-9557-cebb7b52f0ca": {
+      "type": "hero",
+      "settings": {
+        "bg_color": "",
+        "ptop": 0,
+        "pbottom": 0,
+        "heading": "Design Well Lived.",
+        "image": "shopify:\/\/shop_images\/henriliving-hero.jpg"
+      }
+    },
+    "55a436f1-a043-49a5-b8be-162775dbf54f": {
+      "type": "bg-accent",
       "blocks": {
-        "heading": {
-          "type": "heading",
+        "d5890755-6bb1-4cf7-a4de-c30df315b1a3": {
+          "type": "grid_item",
           "settings": {
-            "heading": "Image banner",
-            "heading_size": "h0"
+            "image": "shopify:\/\/shop_images\/Clip-Armchair_2023-01-24-170810_oens.jpg",
+            "title": "Clip Armchair by Nika Zupanc",
+            "desc": "Ditre Italia at its Finest",
+            "url": "",
+            "btn_text": "View Collection"
           }
         },
-        "text": {
-          "type": "text",
+        "c2d96187-3078-499c-b6b3-719356692081": {
+          "type": "grid_item",
           "settings": {
-            "text": "Give customers details about the banner image(s) or content on the template.",
-            "text_style": "body"
+            "image": "shopify:\/\/shop_images\/knot-small-by-chiaramonte-marin-brokis-12022018-44745-ret03-b.jpg",
+            "title": "Brokis",
+            "desc": "New Lighting In-Store Now",
+            "url": "",
+            "btn_text": "View Collection"
           }
         },
-        "button": {
-          "type": "buttons",
+        "ca5c9314-aeb1-4659-93ed-7ae81c0cfef6": {
+          "type": "grid_item",
           "settings": {
-            "button_label_1": "Shop all",
-            "button_link_1": "shopify:\/\/collections\/all",
-            "button_style_secondary_1": true,
-            "button_label_2": "",
-            "button_link_2": "",
-            "button_style_secondary_2": false
+            "image": "shopify:\/\/shop_images\/Mixis-air-color.gif",
+            "title": "Crassevig",
+            "desc": "New to the Henri family",
+            "url": "",
+            "btn_text": "View Collection"
           }
         }
       },
       "block_order": [
-        "heading",
-        "text",
-        "button"
+        "d5890755-6bb1-4cf7-a4de-c30df315b1a3",
+        "c2d96187-3078-499c-b6b3-719356692081",
+        "ca5c9314-aeb1-4659-93ed-7ae81c0cfef6"
       ],
       "settings": {
-        "image": "{{ shop.brand.cover_image }}",
-        "image_overlay_opacity": 40,
-        "image_height": "large",
-        "adapt_height_first_image": false,
-        "desktop_content_position": "bottom-center",
-        "show_text_box": false,
-        "desktop_content_alignment": "center",
-        "color_scheme": "background-1",
-        "mobile_content_alignment": "center",
-        "stack_images_on_mobile": false,
-        "show_text_below": false
+        "bg_color": "#a9aea7",
+        "ptop": 28,
+        "pbottom": 36,
+        "heading": "News."
       }
     },
-    "rich_text": {
-      "type": "rich-text",
+    "73dd856f-c447-4dda-9c75-4f1e19641354": {
+      "type": "bg-light",
       "blocks": {
-        "heading": {
-          "type": "heading",
+        "3ee18f60-ca08-452d-be4d-d7ec9ca5c571": {
+          "type": "grid_item",
           "settings": {
-            "heading": "<p>Talk about your brand<\/p>",
-            "heading_size": "h1"
+            "image": "shopify:\/\/shop_images\/Bolzan-nero.png",
+            "url": ""
           }
         },
-        "text": {
-          "type": "text",
+        "996d1513-d218-45ba-a4fa-958feaaa5ab1": {
+          "type": "grid_item",
           "settings": {
-            "text": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.<\/p>"
+            "image": "shopify:\/\/shop_images\/Brokis-Logo_gkhi.png",
+            "url": ""
+          }
+        },
+        "1e1ffa26-1771-412b-8d90-f5e57e42b831": {
+          "type": "grid_item",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Crassevig-Logo.png",
+            "url": ""
+          }
+        },
+        "62aab073-cc2b-43a4-ada8-7fbcedb8faa0": {
+          "type": "grid_item",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Deslato.png",
+            "url": ""
+          }
+        },
+        "3a0cdafd-44ee-4e77-9209-e729adc68b35": {
+          "type": "grid_item",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Desiree-Divani-No-Graphic.png",
+            "url": ""
+          }
+        },
+        "29f7fcd9-00fd-4ec6-b070-327b71475070": {
+          "type": "grid_item",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/D3_2023-01-24-154247_gqrn.png",
+            "url": ""
+          }
+        },
+        "74841a60-e927-4015-a9dd-e2bd993149b9": {
+          "type": "grid_item",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Harbour-Outdoor-BLACK_2023-01-24-160627_xnet.png",
+            "url": ""
+          }
+        },
+        "a2111ae3-a781-4054-adcc-66f562e9b137": {
+          "type": "grid_item",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/LaCividina_2023-01-24-160434_tlem.png",
+            "url": ""
+          }
+        },
+        "267e1594-7403-4493-b444-25a47e0f0e00": {
+          "type": "grid_item",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/SabaItalia.png",
+            "url": ""
+          }
+        },
+        "362413dd-48d7-4ff7-bfc9-53b6ad7a6a90": {
+          "type": "grid_item",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Talenti_2023-01-24-160115_yfqt.png",
+            "url": ""
           }
         }
       },
       "block_order": [
-        "heading",
-        "text"
+        "3ee18f60-ca08-452d-be4d-d7ec9ca5c571",
+        "996d1513-d218-45ba-a4fa-958feaaa5ab1",
+        "1e1ffa26-1771-412b-8d90-f5e57e42b831",
+        "62aab073-cc2b-43a4-ada8-7fbcedb8faa0",
+        "3a0cdafd-44ee-4e77-9209-e729adc68b35",
+        "29f7fcd9-00fd-4ec6-b070-327b71475070",
+        "74841a60-e927-4015-a9dd-e2bd993149b9",
+        "a2111ae3-a781-4054-adcc-66f562e9b137",
+        "267e1594-7403-4493-b444-25a47e0f0e00",
+        "362413dd-48d7-4ff7-bfc9-53b6ad7a6a90"
       ],
       "settings": {
-        "desktop_content_position": "center",
-        "content_alignment": "center",
-        "color_scheme": "background-1",
-        "full_width": true,
-        "padding_top": 40,
-        "padding_bottom": 0
+        "bg_color": "",
+        "ptop": 36,
+        "pbottom": 36,
+        "heading": "Brands."
       }
     },
-    "featured_collection": {
-      "type": "featured-collection",
-      "settings": {
-        "title": "Featured products",
-        "heading_size": "h2",
-        "description": "",
-        "show_description": false,
-        "description_style": "body",
-        "collection": "all",
-        "products_to_show": 8,
-        "columns_desktop": 4,
-        "full_width": false,
-        "show_view_all": true,
-        "view_all_style": "solid",
-        "enable_desktop_slider": false,
-        "color_scheme": "background-1",
-        "image_ratio": "adapt",
-        "show_secondary_image": true,
-        "show_vendor": false,
-        "show_rating": false,
-        "enable_quick_add": false,
-        "columns_mobile": "2",
-        "swipe_on_mobile": false,
-        "padding_top": 28,
-        "padding_bottom": 36
-      }
-    },
-    "collage": {
-      "type": "collage",
+    "0fe5bed8-9d66-4a7f-97c4-6479a969fd3b": {
+      "type": "featured-article",
       "blocks": {
-        "collection-0": {
-          "type": "collection",
+        "d1891158-0524-47bd-9661-f21f2c5cbf0c": {
+          "type": "grid_item",
           "settings": {
-            "collection": ""
+            "title": "COASTAL PARADISE, Cottesloe",
+            "label_1": "LOCATION:",
+            "url_1": "",
+            "desc_1": "Cottesloe, Western Australia",
+            "label_2": "PHOTOGRAPHY:",
+            "url_2": "https:\/\/www.jodydarcy.com\/",
+            "desc_2": "Jody D'Arcy",
+            "label_3": "STYLIST:",
+            "url_3": "http:\/\/www.featherhorse.com.au\/",
+            "desc_3": "Featherhorse",
+            "label_4": "BUILDER:",
+            "url_4": "https:\/\/zorzi.com.au\/collections\/modern\/nautilius\/",
+            "desc_4": "Zorzi"
           }
         },
-        "product": {
-          "type": "product",
+        "7f5c8639-deb3-483c-9c17-6ddbd829575f": {
+          "type": "img_richtext",
           "settings": {
-            "product": "",
-            "second_image": false
+            "img": "shopify:\/\/shop_images\/HEN-Coastal_Paradise-1.jpg",
+            "text": "<p><strong>RESORT PROPERTY <\/strong><em><strong>on the<\/strong><\/em><strong> WEST COAST<\/strong><\/p>"
           }
         },
-        "collection-1": {
-          "type": "collection",
+        "1a4ce299-f047-4014-a896-3b067c14caac": {
+          "type": "img_with_button",
           "settings": {
-            "collection": ""
+            "img": "shopify:\/\/shop_images\/HEN-Coastal_Paradise-2.jpg",
+            "url": "",
+            "text": "MORE PORJECT"
           }
         }
       },
       "block_order": [
-        "collection-0",
-        "product",
-        "collection-1"
+        "d1891158-0524-47bd-9661-f21f2c5cbf0c",
+        "7f5c8639-deb3-483c-9c17-6ddbd829575f",
+        "1a4ce299-f047-4014-a896-3b067c14caac"
       ],
       "settings": {
-        "heading": "Multimedia collage",
-        "heading_size": "h2",
-        "desktop_layout": "left",
-        "mobile_layout": "collage",
-        "card_styles": "product-card-wrapper",
-        "color_scheme": "background-1",
-        "padding_top": 36,
-        "padding_bottom": 36
+        "bg_color": "#a9aea7",
+        "ptop": 20,
+        "pbottom": 20,
+        "heading": "In Focus."
       }
     },
-    "video": {
-      "type": "video",
-      "settings": {
-        "heading": "",
-        "heading_size": "h1",
-        "video_url": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc",
-        "description": "",
-        "full_width": false,
-        "color_scheme": "background-1",
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
-    "multicolumn": {
-      "type": "multicolumn",
+    "21abbafa-fc69-419a-9a24-bd4f67ac1a43": {
+      "type": "carousel-album",
       "blocks": {
-        "column1": {
-          "type": "column",
+        "3a58f03f-757c-47cc-b327-904fffe1a3b7": {
+          "type": "slide_item",
           "settings": {
-            "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
-            "link_label": "",
-            "link": ""
+            "image": "shopify:\/\/shop_images\/SETSUSHINOBUITO_1.jpg",
+            "title": "Setsu & Shinobu Ito",
+            "desc": "Milan. IT",
+            "url": "https:\/\/henri-staging.spicybuild.net\/designers\/setsu-shinobu-ito"
           }
         },
-        "column2": {
-          "type": "column",
+        "9f59e4e1-6837-46df-a541-5e8c64a0c91d": {
+          "type": "slide_item",
           "settings": {
-            "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
-            "link_label": "",
-            "link": ""
+            "image": "shopify:\/\/shop_images\/palomba-serafini.jpg",
+            "title": "Ludovica + Roberto Palomba",
+            "desc": "Milan, IT",
+            "url": ""
           }
         },
-        "column3": {
-          "type": "column",
+        "f19a232f-49e8-4bc0-855d-6f8975d372ec": {
+          "type": "slide_item",
           "settings": {
-            "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
-            "link_label": "",
-            "link": ""
+            "image": "shopify:\/\/shop_images\/roberto-gobboWebsite.jpg",
+            "title": "Roberto Gobbo",
+            "desc": "Treviso, IT",
+            "url": ""
+          }
+        },
+        "09ba4399-49ee-433b-8524-5d1d9539fb2f": {
+          "type": "slide_item",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Mario-Ferrarini.jpg",
+            "title": "Mario Ferrarini",
+            "desc": "Treviso, ITTreviso, IT",
+            "url": ""
+          }
+        },
+        "7634a326-bf33-4053-a061-28eee274b5cf": {
+          "type": "slide_item",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/D_Marc_Sadler_2560.jpg",
+            "title": "Marc Sadler",
+            "desc": "Milan, IT",
+            "url": ""
+          }
+        },
+        "f9790408-bbfd-4986-9453-cf5ac9a2559b": {
+          "type": "slide_item",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/AtelierOi_dettaglio.jpg",
+            "title": "Atelier oï",
+            "desc": "La Neuveville, CH",
+            "url": ""
           }
         }
       },
       "block_order": [
-        "column1",
-        "column2",
-        "column3"
+        "3a58f03f-757c-47cc-b327-904fffe1a3b7",
+        "9f59e4e1-6837-46df-a541-5e8c64a0c91d",
+        "f19a232f-49e8-4bc0-855d-6f8975d372ec",
+        "09ba4399-49ee-433b-8524-5d1d9539fb2f",
+        "7634a326-bf33-4053-a061-28eee274b5cf",
+        "f9790408-bbfd-4986-9453-cf5ac9a2559b"
       ],
       "settings": {
-        "title": "",
-        "heading_size": "h1",
-        "image_width": "third",
-        "image_ratio": "adapt",
-        "columns_desktop": 3,
-        "column_alignment": "center",
-        "background_style": "none",
-        "button_label": "",
-        "button_link": "",
-        "color_scheme": "background-1",
-        "columns_mobile": "1",
-        "swipe_on_mobile": false,
-        "padding_top": 36,
-        "padding_bottom": 36
+        "bg_color": "",
+        "ptop": 20,
+        "pbottom": 20,
+        "heading": "Designers.",
+        "text": "MORE DESIGNERS",
+        "url": ""
       }
     }
   },
   "order": [
-    "image_banner",
-    "rich_text",
-    "featured_collection",
-    "collage",
-    "video",
-    "multicolumn"
+    "5c8c2e4c-2240-427e-9557-cebb7b52f0ca",
+    "55a436f1-a043-49a5-b8be-162775dbf54f",
+    "73dd856f-c447-4dda-9c75-4f1e19641354",
+    "0fe5bed8-9d66-4a7f-97c4-6479a969fd3b",
+    "21abbafa-fc69-419a-9a24-bd4f67ac1a43"
   ]
 }

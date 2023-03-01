@@ -1,0 +1,18 @@
+<li>
+  <a href="{{- url -}}" class="designer-card">
+    <div class="designer-card--image">
+      <img
+        src="{%- if img != blank -%}{{- img | img_url:"1000x" -}} {%- else -%} {{- img_url -}} {% endif %}"
+        width
+        height
+        alt=" {{- title -}}"
+        loading="lazy"
+        data-xblocker="passed"
+      >
+    </div>
+    <div class="designer-card--content">
+      <h3>{{- title -}}</h3>
+      <span class="subtitle">{{- sub_title -}}</span>
+    </div>
+  </a>
+</li>

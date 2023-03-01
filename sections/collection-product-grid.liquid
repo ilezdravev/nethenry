@@ -1,0 +1,94 @@
+{% render 'section-settings' %}
+<div class="site-wrapper">
+  <main class="page-content padding-top fade-in standard-layout container">
+    <header class="page-header">
+      <h1 class="text-accent">{{ collection.title }}</h1>
+      {%- if section.settings.menu != blank -%}
+        {% render 'collection-menu', menu: section.settings.menu %}
+      {%- endif -%}
+    </header>
+    <div class="content-inner">
+      <div id="component-anukdn" class="sprig-component">
+        <section class="products">
+          {%- paginate collection.products by section.settings.products_per_page -%}
+            {%- if collection.products.size != 0 -%}
+              {%- for product in collection.products -%}
+                {% render 'product-card', product: product %}
+              {%- endfor -%}
+            {%- endif -%}
+          {%- endpaginate -%}
+        </section>
+        {%- paginate collection.products by section.settings.products_per_page -%}
+          {%- if paginate.pages > 1 -%}
+            <input type="hidden" value="{{ paginate.next.url }}" data-next-url>
+            <input type="hidden" value="{{ paginate.pages }}" data-total-pages>
+            <input type="hidden" value="{{ paginate.current_page }}" data-current-page>
+            <div class="load-more_wrap">
+              <button class="btn submit js-load-more load-more-btn">
+                <span load-more-text>Load more</span>
+                <span class="hide" loader>{% include 'icon-loading' %}</span>
+              </button>
+            </div>
+          {%- endif -%}
+        {%- endpaginate -%}
+      </div>
+    </div>
+  </main>
+</div>
+{% schema %}
+{
+  "name": "Collection product grid",
+  "class": "section",
+  "settings": [
+    {
+      "type": "color",
+      "id": "bg_color",
+      "label": "Background Color"
+    },
+    {
+      "type": "header",
+      "content": "padding settings"
+    },
+    {
+      "type": "range",
+      "id": "ptop",
+      "min": 0,
+      "max": 36,
+      "step": 4,
+      "unit": "px",
+      "label": "Padding top",
+      "default": 20
+    },
+    {
+      "type": "range",
+      "id": "pbottom",
+      "min": 0,
+      "max": 36,
+      "step": 4,
+      "unit": "px",
+      "label": "Padding bottom",
+      "default": 20
+    },
+    {
+      "type": "range",
+      "id": "products_per_page",
+      "min": 8,
+      "max": 24,
+      "step": 4,
+      "default": 16,
+      "label": "Products per page"
+    },
+    {
+      "type": "link_list",
+      "id": "menu",
+      "label": "menu",
+      "default": "main-menu"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Collection product grid"
+    }
+  ]
+}
+{% endschema %}

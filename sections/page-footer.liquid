@@ -1,0 +1,163 @@
+{% render 'section-settings' %}
+<footer class="page-footer">
+    <div class="footer-cols container">  
+        {% for block in section.blocks %}
+            {%- case block.type -%}
+                {%- when 'site_block' -%}
+                    <section class="footer-1">    
+                        <a href="{{ block.settings.url }}" title="Henri Living">
+                            <img src="{{ block.settings.logo | img_url:"500x"}}" width="95" height="33" alt="Henri Living" class="logo">
+                        </a>
+                        <h2>—</h2>
+                        <h2>{{ block.settings.title }}</h2>
+                        <p>{{ block.settings.sub_title }}</p>
+                        <p>
+                            <a href="{{ block.settings.url_1 }}">{{ block.settings.text_1 }}</a> 
+                            • 
+                            <a href="{{ block.settings.url_2 }}">{{ block.settings.text_2 }}</a>
+                        </p>
+                    </section>
+                {%- when 'links_block' -%}
+                    <section class="footer-2">
+                        <h2>{{ block.settings.title }}</h2>
+                        <p>
+                            {%- for link in block.settings.menu_1.links -%}
+                                <a href="{{ link.url }}">{{ link.title }} </a>
+                                <br>
+                            {%- endfor -%}
+                            {{ block.settings.text }}
+                            <a href="{{ block.settings.url_1 }}" target="_blank" rel="noreferrer noopener">{{ block.settings.text_1 }}</a> 
+                            {%- if block.settings.url_2 != blank -%}
+                                +
+                            {%- endif -%} 
+                            <a href="{{ block.settngs.url_2}}" target="_blank" rel="noreferrer noopener">{{ block.settings.text_2}}</a>
+                        </p>
+                    </section>
+                {% when 'contact_form'%}
+                    {% render 'footer-contact-form', url : block.settings.url %}
+                {%- else -%}
+            {%- endcase -%}
+        {% endfor %}
+    </div>
+</footer>
+{% schema %}
+    {
+        "name":"Footer",
+        "settings":[
+            {
+                "type":"color",
+                "id":"bg_color",
+                "label":"Background Color"
+            },
+            {
+                "type": "header",
+                "content": "padding settings"
+            },
+            {
+                "type": "range",
+                "id": "ptop",
+                "min": 0,
+                "max": 36,
+                "step": 4,
+                "unit": "px",
+                "label": "Padding top",
+                "default": 20
+            },
+            {
+                "type": "range",
+                "id": "pbottom",
+                "min": 0,
+                "max": 36,
+                "step": 4,
+                "unit": "px",
+                "label": "Padding bottom",
+                "default": 20
+            }
+        ],
+        "blocks":[
+            {
+              "name":"Site Block",
+              "type":"site_block",
+              "settings":[
+                {
+                  "type":"url",
+                  "id":"url",
+                  "label":"RUL"
+                },{
+                  "type":"image_picker",
+                  "id":"logo",
+                  "label":"Logo"
+                },{
+                    "type":"text",
+                    "id":"title",
+                    "label":"Title"
+                },{
+                    "type":"text",
+                    "id":"sub_title",
+                    "label":"Sub title"
+                },{
+                    "type":"url",
+                    "id":"url_1",
+                    "label":"Url 1"
+                },{
+                    "type":"text",
+                    "id":"text_1",
+                    "label":"text 1"
+                },{
+                    "type":"url",
+                    "id":"url_2",
+                    "label":"Url 2"
+                },{
+                    "type":"text",
+                    "id":"text_2",
+                    "label":"text 2"
+                }
+              ]
+            },{
+                "name":"Link Block",
+                "type":"links_block",
+                "settings":[
+                   {
+                        "type":"text",
+                        "id":"title",
+                        "label":"Title"
+                    },{
+                        "type":"link_list",
+                        "id":"menu_1",
+                        "label":"Munu 1"
+                    },{
+                        "type":"text",
+                        "id":"text",
+                        "label":"Social label"
+                    }, {
+                        "type": "url",
+                        "id": "url_1",
+                        "label": "Link url 1"
+                    },{
+                        "type": "text",
+                        "id": "text_1",
+                        "label": "Text 1"
+                    },{
+                        "type": "url",
+                        "id": "url_2",
+                        "label": "Link url 2"
+                    },{
+                        "type": "text",
+                        "id": "text_2",
+                        "label": "Text 2"
+                    }
+                ]
+            },{
+                "name":"Contact form",
+                "type":"contact_form",
+                "settings":[
+                    {
+                        "type":"url",
+                        "id":"url",
+                        "label":"URL"
+                    }
+                ]
+            }
+        ]
+    }
+{% endschema %}

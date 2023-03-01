@@ -1,0 +1,140 @@
+{% render 'section-settings' %}
+    <div class='content-inner standard-layout fixed-container '>
+        <header>
+            <h1 class="text-accent text-center">{{ section.settings.heading }}</h1>
+         </header>
+        {%- for block in section.blocks -%}
+            {%- case block.type -%}
+
+                {%- when 'quote_text' -%}
+                    <figure class="blockquote">
+                        <blockquote>
+                            <p>
+                                <q>
+                                    {{ block.settings.text }}
+                                </q>
+                            </p>
+                        </blockquote>
+                    </figure>
+                {%- when 'figure_text' -%}
+                    <figure class="blockquote">
+                        <figcaption>
+                        {{ block.settngs.text }}
+                        </figcaption>
+                    </figure>
+                {%- when 'desc' -%}
+                    <div class="text-" style=" max-width: ; margin: auto;">
+                        <p>{{ block.settings.text }}</p>
+                    </div>
+                {%- when 'media_block' -%}
+                    <div class="media-block">
+                        <figure class="ls-2-cols row-reverse">
+                            <div class="relative">
+                                <div class="relative media-media">
+                                    <img loading="lazy" src="{{ block.settings.img | img_url : "500x" }}" width height data-xblocker="passed" style="visibility: visible;">
+                                </div>
+                            </div>
+                            <figcaption class="relative">
+                                <div class="media-text relative">
+                                    <p>{{ block.settings.text }}</p>
+                                </div>
+                            </figcaption>
+                        </figure>
+                    </div>
+                {%- else -%}
+                    
+            {%- endcase -%}
+        {%- endfor -%}
+    </div>
+{% schema %}
+
+    {
+        "name": "Main about",
+        "settings":[
+            {
+                "type":"color",
+                "id":"bg_color",
+                "label":"Background Color"
+            },{
+                "type": "header",
+                "content": "padding settings"
+            },{
+                "type": "range",
+                "id": "ptop",
+                "min": 0,
+                "max": 36,
+                "step": 4,
+                "unit": "px",
+                "label": "Padding top",
+                "default": 20
+            },{
+                "type": "range",
+                "id": "pbottom",
+                "min": 0,
+                "max": 36,
+                "step": 4,
+                "unit": "px",
+                "label": "Padding bottom",
+                "default": 20
+            },{
+                "type":"text",
+                "id":"heading",
+                "label":"Heading"
+            }
+
+        ],
+        "blocks":[
+            {
+                "name":"Quote text",
+                "type":"quote_text",
+                "settings":[
+                    {
+                        "type" : "text",
+                        "id":"text",
+                        "label":"Text"
+                    }
+                ]
+            },{
+                "name":"Figure text",
+                "type":"figure_text",
+                "settings":[
+                    {
+                        "type" : "text",
+                        "id":"text",
+                        "label":"Text"
+                    }
+                ]
+            },{
+                "name":"Desciption",
+                "type":"desc",
+                "settings":[
+                    {
+                        "type" : "text",
+                        "id":"text",
+                        "label":"Text"
+                    }
+                ]
+            },
+            {
+                "name":"Media block",
+                "type":"media_block",
+                "settings":[
+                    {
+                        "type" : "image_picker",
+                        "id":"img",
+                        "label":"Image"
+                    },{
+                        "type" : "text",
+                        "id":"text",
+                        "label":"Text"
+                    }
+                ]
+            }
+        ],  
+        "presets":[
+            {
+                "name":"Main about"
+            }
+        ]        
+    }
+{% endschema %}

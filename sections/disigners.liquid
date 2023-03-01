@@ -1,0 +1,108 @@
+{% render 'section-settings' %}
+<div class="site-wrapper">
+  <main class="page-content fade-in standard-layout container">
+    <header>
+      <h1 class="text-accent">Designers.</h1>
+    </header>
+    <div class="content-inner">
+      <div
+        id="component-gdzuls"
+        class="sprig-component"
+        data-item-count="{{ section.blocks.size }}"
+        data-current-page="1"
+        data-per-page="{{ section.settings.show_per_page }}"
+      >
+        <ul class="p0 grid lg-grid-4 grid-gap">
+          {% for block in section.blocks %}
+            <div class="disigner-card data-index = {{ forloop.index }} {% unless forloop.index <= section.settings.show_per_page %} hide {% endunless %}">
+              {% render 'disigner-card',
+                url: block.settings.url,
+                img: block.settings.image,
+                title: block.settings.title,
+                sub_title: block.settings.sub_title
+              %}
+            </div>
+          {% endfor %}
+        </ul>
+        {% if section.blocks.size > section.settings.show_per_page %}
+          <button id="disigners-load-more-button" class="btn submit load-more-btn">Load More</button>
+        {% endif %}
+      </div>
+    </div>
+  </main>
+</div>
+{% schema %}
+{
+  "name": "Disigner",
+  "settings": [
+    {
+      "type": "color",
+      "id": "bg_color",
+      "label": "Background Color"
+    },
+    {
+      "type": "range",
+      "id": "show_per_page",
+      "min": 4,
+      "max": 24,
+      "step": 4,
+      "default": 16,
+      "label": "Grid item per page"
+    },
+    {
+      "type": "header",
+      "content": "padding settings"
+    },
+    {
+      "type": "range",
+      "id": "ptop",
+      "min": 0,
+      "max": 36,
+      "step": 4,
+      "unit": "px",
+      "label": "Padding top",
+      "default": 20
+    },
+    {
+      "type": "range",
+      "id": "pbottom",
+      "min": 0,
+      "max": 36,
+      "step": 4,
+      "unit": "px",
+      "label": "Padding bottom",
+      "default": 20
+    }
+  ],
+  "blocks": [
+    {
+      "name": "Grid Item",
+      "type": "gird_item",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "url",
+          "id": "url",
+          "label": "Url"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "default": "Your title",
+          "label": "Title"
+        },
+        {
+          "type": "text",
+          "id": "sub_title",
+          "default": "Sub title",
+          "label": "Sub title"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

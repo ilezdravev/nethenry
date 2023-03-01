@@ -143,19 +143,37 @@
       },
       "header": {
         "type": "header",
+        "blocks": {
+          "48613760-9589-4e42-b955-1c26a049dcf1": {
+            "type": "social_menu",
+            "settings": {
+              "url": "https:\/\/www.instagram.com\/henri_living\/",
+              "icon": "<svg xmlns=\"http:\/\/www.w3.org\/2000\/svg\" viewbox=\"0 0 448 512\"><path d=\"M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z\"><\/path><\/svg>"
+            }
+          },
+          "9d4cfd29-9fd4-4b8c-969a-3a562bf80535": {
+            "type": "social_menu",
+            "settings": {
+              "url": "https:\/\/www.facebook.com\/HenriLiving\/",
+              "icon": "<svg xmlns=\"http:\/\/www.w3.org\/2000\/svg\" viewbox=\"0 0 320 512\"><path d=\"M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z\"><\/path><\/svg>"
+            }
+          }
+        },
+        "block_order": [
+          "48613760-9589-4e42-b955-1c26a049dcf1",
+          "9d4cfd29-9fd4-4b8c-969a-3a562bf80535"
+        ],
         "settings": {
-          "color_scheme": "background-1",
-          "logo": "{{ shop.brand.logo }}",
-          "logo_width": 90,
+          "bg_color": "",
+          "logo": "shopify:\/\/shop_images\/logo.svg",
+          "logo_width": 140,
           "logo_position": "middle-left",
           "menu": "main-menu",
-          "menu_type_desktop": "dropdown",
-          "show_line_separator": true,
-          "enable_sticky_header": true,
+          "social_menu": "",
           "mobile_logo_position": "center",
           "margin_bottom": 0,
-          "padding_top": 20,
-          "padding_bottom": 20
+          "padding_top": 36,
+          "padding_bottom": 60
         }
       },
       "footer": {
@@ -214,8 +232,57 @@
         "settings": {
           "color_scheme": "background-1"
         }
+      },
+      "page-footer": {
+        "type": "page-footer",
+        "blocks": {
+          "029f0b07-b99b-4ced-93f8-689fc975d011": {
+            "type": "site_block",
+            "settings": {
+              "url": "",
+              "logo": "shopify:\/\/shop_images\/logo.svg",
+              "title": "Design Well Lived.",
+              "sub_title": "© 2023 Henri Living",
+              "url_1": "shopify:\/\/pages\/about",
+              "text_1": "Privacy Policy",
+              "url_2": "shopify:\/\/pages\/contact",
+              "text_2": "Contact Us"
+            }
+          },
+          "6447934b-6637-44b2-a0df-06f9dbdb7f5c": {
+            "type": "links_block",
+            "settings": {
+              "title": "USEFUL INFORMATION",
+              "menu_1": "footer",
+              "text": "Social *",
+              "url_1": "https:\/\/www.instagram.com\/henri_living\/",
+              "text_1": "Instagram",
+              "url_2": "#https:\/\/www.facebook.com\/HenriLiving\/",
+              "text_2": "Facebook"
+            }
+          },
+          "2f789657-0d16-40ec-990e-b8152b3f873c": {
+            "type": "contact_form",
+            "settings": {
+              "url": ""
+            }
+          }
+        },
+        "block_order": [
+          "029f0b07-b99b-4ced-93f8-689fc975d011",
+          "6447934b-6637-44b2-a0df-06f9dbdb7f5c",
+          "2f789657-0d16-40ec-990e-b8152b3f873c"
+        ],
+        "settings": {
+          "bg_color": "",
+          "ptop": 0,
+          "pbottom": 0
+        }
       }
-    }
+    },
+    "content_for_index": [
+
+    ]
   },
   "presets": {
     "Default": {
@@ -363,14 +430,10 @@
         "header": {
           "type": "header",
           "settings": {
-            "color_scheme": "background-1",
             "logo": "{{ shop.brand.logo }}",
             "logo_width": 90,
             "logo_position": "middle-left",
             "menu": "main-menu",
-            "menu_type_desktop": "dropdown",
-            "show_line_separator": true,
-            "enable_sticky_header": true,
             "mobile_logo_position": "center",
             "margin_bottom": 0,
             "padding_top": 20,

@@ -1,0 +1,124 @@
+{% render 'section-settings' %}
+<div class="site-wrapper">
+  <main class="standard-layout container">
+    <nav class="product-item-nav breadcrumb">
+      <a href="https://henri-staging.spicybuild.net/indoor-furniture">Indoor Furniture</a>
+      <span class="breadcrumb-seperator"></span> 25 Dining Table
+    </nav>
+    <section class="md-3-cols pt-0">
+      <div class="col-1">
+        <figure>
+          <a
+            href="{{- product.url -}}"
+            data-src="{{- product.featured_image | img_url : '1000x'-}}"
+            data-fancybox="gallery"
+          >
+            <img
+              src="{{- product.featured_image | img_url : '1000x'-}}"
+              width
+              height
+              alt="25 Dining Table"
+              data-xblocker="passed"
+              style="visibility: visible;"
+            >
+          </a>
+        </figure>
+      </div>
+
+      <div class="col-2">
+        <h1 class="product-single-title">
+          {{- product.title | escape -}}
+        </h1>
+        <p>
+          {{- product.description | escape -}}
+        </p>
+      </div>
+    </section>
+
+    <ul class="no-list product-meta">
+      {%- if product.metafields.download.text != blank -%}
+        <li>
+          <a href="{{ product.metafields.made_by.url_1 }}">{{ product.metafields.made_by.collection_url_1 }}</a>
+          {%- if product.metafields.made_by.text_2 != blank -%}
+            by <a href="{{ product.metafields.made_by.url_2 }}">{{ product.metafields.made_by.text_2 }}</a>
+          {%- endif -%}
+        </li>
+      {%- endif -%}
+      {%- if product.metafields.designer.text != blank -%}
+        <li>
+          Designer: <a href="{{ product.metafields.designer.url }}">{{ product.metafields.designer.text }}</a>
+        </li>
+      {%- endif -%}
+      {%- if product.metafields.download.text != blank -%}
+        <li>
+          Downloads:
+          <a href="{{ product.metafields.download.url }}" target="_blank" rel="noreferrer noopener">
+            {{- product.metafields.download.text -}}
+          </a>
+        </li>
+      {%- endif -%}
+    </ul>
+    <section>
+      <div class="product-gallery">
+        {%- for image in product.images -%}
+          {%- if image == product.featured_image -%}
+            {%- continue -%}
+          {%- endif -%}
+          <a href="{{- product.url -}}" data-src="{{- image | img_url : '1000x' -}}" data-fancybox="gallery">
+            <figure>
+              <img
+                src="{{- image | img_url : '1000x' -}}"
+                width
+                height
+                loading="lazy"
+                data-xblocker="passed"
+                style="visibility: visible;"
+              >
+            </figure>
+          </a>
+        {%- endfor -%}
+      </div>
+    </section>
+  </main>
+</div>
+{% schema %}
+{
+  "name": "Main product grid",
+  "settings": [
+    {
+      "type": "color",
+      "id": "bg_color",
+      "label": "Background Color"
+    },
+    {
+      "type": "header",
+      "content": "padding settings"
+    },
+    {
+      "type": "range",
+      "id": "ptop",
+      "min": 0,
+      "max": 36,
+      "step": 4,
+      "unit": "px",
+      "label": "Padding top",
+      "default": 20
+    },
+    {
+      "type": "range",
+      "id": "pbottom",
+      "min": 0,
+      "max": 36,
+      "step": 4,
+      "unit": "px",
+      "label": "Padding bottom",
+      "default": 20
+    }
+  ],
+  "presets": [
+    {
+      "name": "Main product grid"
+    }
+  ]
+}
+{% endschema %}

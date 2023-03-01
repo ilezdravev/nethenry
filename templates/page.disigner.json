@@ -1,0 +1,10 @@
+{
+    "sections": {
+      "disigner": {
+        "type": "disigner"
+      }
+    },
+    "order": [
+      "disigner"
+    ]
+}
